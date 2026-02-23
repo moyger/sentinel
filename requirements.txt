@@ -1,0 +1,53 @@
+# Sentinel - Agentic Second Brain
+# Core dependencies for memory, heartbeat, and adapters
+
+# Core Python utilities
+python-dotenv>=1.0.0          # Environment variable management
+
+# Database & Storage
+aiosqlite>=0.19.0             # Async SQLite for session indexing
+sqlite-vec>=0.0.1             # Vector search capabilities for RAG
+
+# Slack Integration
+slack-sdk>=3.23.0             # Slack Bot SDK with Socket Mode support
+slack-bolt>=1.18.0            # Slack Bolt framework for easier bot development
+
+# Google Workspace Integration
+google-auth>=2.23.0           # Google API authentication
+google-auth-oauthlib>=1.1.0   # OAuth library for Google
+google-auth-httplib2>=0.1.1   # HTTP library for Google Auth
+google-api-python-client>=2.100.0  # Google API client (Gmail, Calendar)
+
+# Asana Integration
+asana>=5.0.0                  # Asana API client
+
+# Claude Agent SDK
+anthropic>=0.18.0             # Anthropic Claude API client
+
+# Utilities
+aiohttp>=3.9.0                # Async HTTP client
+httpx>=0.25.0                 # Modern HTTP client
+pydantic>=2.5.0               # Data validation and settings management
+pyyaml>=6.0.1                 # YAML parsing for config files
+python-dateutil>=2.8.2        # Date utilities
+pytz>=2023.3                  # Timezone support
+
+# Markdown & Text Processing
+markdown>=3.5.0               # Markdown processing
+beautifulsoup4>=4.12.0        # HTML/XML parsing
+lxml>=4.9.0                   # Fast XML/HTML processor
+
+# Scheduling & Background Tasks
+schedule>=1.2.0               # Job scheduling for heartbeat
+apscheduler>=3.10.4           # Advanced scheduling capabilities
+
+# Development & Testing
+pytest>=7.4.3                 # Testing framework
+pytest-asyncio>=0.21.1        # Async test support
+pytest-cov>=4.1.0             # Test coverage
+black>=23.11.0                # Code formatting
+flake8>=6.1.0                 # Linting
+mypy>=1.7.0                   # Type checking
+
+# Logging & Monitoring
+structlog>=23.2.0             # Structured logging

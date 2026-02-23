@@ -1,6 +1,11 @@
 """
-Skill Registry Module
+Skills system for Sentinel.
 
-Local-only skill management system for extending agent capabilities.
-Handles skill discovery, loading, execution, and validation.
+Provides skill discovery, loading, execution, and management capabilities.
 """
+
+from .skill_manager import SkillManager
+from .skill_executor import SkillExecutor
+from .skill_registry import SkillRegistry
+
+__all__ = ["SkillManager", "SkillExecutor", "SkillRegistry"]

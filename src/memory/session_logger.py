@@ -370,7 +370,7 @@ class SessionLogger:
                 self.markdown.append_to_daily_log(session_start, section="Sessions")
             else:
                 # Append to existing session
-                pattern = f"({session_header}.*?)(?=\n### |(?=\n## )|(?=\Z))"
+                pattern = rf"({session_header}.*?)(?=\n### |(?=\n## )|(?=\Z))"
                 import re
                 match = re.search(pattern, current, flags=re.DOTALL)
                 if match:

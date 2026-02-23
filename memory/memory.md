@@ -43,6 +43,25 @@ This document serves as a repository for major decisions, significant events, an
 
 <!-- High-level strategic decisions about direction, priorities, investments -->
 
+
+#### 2026-02-23 - Test Markdown Decision
+- **Context:** Testing the markdown manager
+- **Decision:** Add test decision to memory.md
+- **Rationale:** To verify the system works
+- **Status:** Active
+- **Related:** #test
+
+
+
+#### 2026-02-23 - Hybrid Memory System Architecture
+- **Context:** Need a memory system that is both portable and queryable
+- **Decision:** Use SQLite + Markdown hybrid approach
+- **Rationale:** Combines portability with query power, enables Obsidian integration
+- **Impact:** Enables rich memory features while keeping data accessible
+- **Status:** Active
+- **Related:** #architecture #memory-system
+
+
 ---
 
 ## Historical Context
@@ -170,5 +189,9 @@ Key facts, principles, or context:
 
 ---
 
-*Last updated: {{ date }}*
+*Last updated: 2026-02-23*
 *Review this document monthly to keep it current and useful.*
+
+---
+
+*Last updated: 2026-02-23*

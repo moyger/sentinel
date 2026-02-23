@@ -86,35 +86,35 @@ This document breaks down the Sentinel implementation into 4 phases: Core Memory
 ## Phase 3: Heartbeat Loop
 
 ### Scheduled Execution Framework
-- [ ] Design heartbeat scheduling system (30-minute intervals)
-- [ ] Implement background task scheduler using Claude Agent SDK
-- [ ] Build heartbeat orchestrator that coordinates all monitoring tasks
-- [ ] Add configuration for heartbeat frequency and monitoring targets
-- [ ] Implement graceful shutdown and restart mechanisms
+- [x] Design heartbeat scheduling system (30-minute intervals)
+- [x] Implement background task scheduler using APScheduler
+- [x] Build heartbeat orchestrator that coordinates all monitoring tasks
+- [x] Add configuration for heartbeat frequency and monitoring targets
+- [x] Implement graceful shutdown and restart mechanisms
 
 ### Gmail Integration
-- [ ] Set up Gmail API authentication (OAuth 2.0)
-- [ ] Implement email fetching and filtering
-- [ ] Build email parsing (extract subject, sender, body, attachments)
-- [ ] Add unread email detection
-- [ ] Create priority email detection (urgent keywords, important senders)
+- [x] Set up Gmail API authentication (OAuth 2.0)
+- [x] Implement email fetching and filtering
+- [x] Build email parsing (extract subject, sender, body, attachments)
+- [x] Add unread email detection
+- [x] Create priority email detection (urgent keywords, important senders)
 - [ ] Implement email summarization for quick review
 
 ### Google Calendar Integration
-- [ ] Set up Google Calendar API authentication
-- [ ] Implement event fetching (today, upcoming week)
+- [x] Set up Google Calendar API authentication
+- [x] Implement event fetching (today, upcoming week)
 - [ ] Build meeting prep detection (check for empty prep docs)
-- [ ] Add calendar event parsing (time, attendees, location, description)
-- [ ] Create upcoming meeting alerts (time-based notifications)
-- [ ] Implement calendar conflict detection
+- [x] Add calendar event parsing (time, attendees, location, description)
+- [x] Create upcoming meeting alerts (time-based notifications)
+- [x] Implement calendar conflict detection
 
 ### Asana Integration
-- [ ] Set up Asana API authentication
-- [ ] Implement task fetching (assigned to user, due soon)
-- [ ] Build task parsing (title, due date, project, priority)
-- [ ] Add overdue task detection
-- [ ] Create task prioritization based on due dates and importance
-- [ ] Implement task status tracking
+- [x] Set up Asana API authentication
+- [x] Implement task fetching (assigned to user, due soon)
+- [x] Build task parsing (title, due date, project, priority)
+- [x] Add overdue task detection
+- [x] Create task prioritization based on due dates and importance
+- [x] Implement task status tracking
 
 ### Slack Monitoring (Proactive)
 - [ ] Implement Slack channel monitoring for mentions
@@ -123,25 +123,25 @@ This document breaks down the Sentinel implementation into 4 phases: Core Memory
 - [ ] Create notification aggregation (avoid spam)
 
 ### Notification & Alert System
-- [ ] Build notification formatter for different alert types
-- [ ] Implement multi-channel notification delivery (Slack, terminal)
-- [ ] Add notification priority system (urgent, normal, low)
-- [ ] Create notification deduplication (avoid duplicate alerts)
-- [ ] Implement notification scheduling (don't disturb hours)
-- [ ] Add notification history and tracking
+- [x] Build notification formatter for different alert types
+- [x] Implement multi-channel notification delivery (Slack, terminal)
+- [x] Add notification priority system (urgent, normal, low)
+- [x] Create notification deduplication (avoid duplicate alerts)
+- [x] Implement notification scheduling (don't disturb hours)
+- [x] Add notification history and tracking
 
 ### Proactive Reasoning Engine
-- [ ] Build reasoning module that analyzes all data sources
-- [ ] Implement decision tree for when to send alerts
-- [ ] Add context-aware suggestions (based on calendar + email + tasks)
+- [x] Build reasoning module that analyzes all data sources
+- [x] Implement decision tree for when to send alerts
+- [x] Add context-aware suggestions (based on calendar + email + tasks)
 - [ ] Create proactive action templates (draft messages, create prep docs)
 - [ ] Implement learning from user feedback on notifications
 
 ### Heartbeat Configuration & Management
-- [ ] Create heartbeat configuration file (enable/disable sources, frequency)
+- [x] Create heartbeat configuration file (enable/disable sources, frequency)
 - [ ] Build heartbeat status dashboard/CLI command
-- [ ] Add heartbeat logging and performance monitoring
-- [ ] Implement error recovery for failed heartbeat cycles
+- [x] Add heartbeat logging and performance monitoring
+- [x] Implement error recovery for failed heartbeat cycles
 
 ---
 

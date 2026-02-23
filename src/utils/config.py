@@ -37,12 +37,13 @@ class Config:
     SLACK_SIGNING_SECRET: str = os.getenv("SLACK_SIGNING_SECRET", "")
     SLACK_BOT_NAME: str = os.getenv("SLACK_BOT_NAME", "Sentinel")
     SLACK_BOT_EMOJI: str = os.getenv("SLACK_BOT_EMOJI", ":robot_face:")
+    SLACK_NOTIFICATION_CHANNEL: str = os.getenv("SLACK_NOTIFICATION_CHANNEL", "")
 
     # Google Workspace APIs
-    GOOGLE_CREDENTIALS_FILE: Path = Path(os.getenv("GOOGLE_CREDENTIALS_FILE", "./config/google_credentials.json"))
-    GMAIL_USER_EMAIL: str = os.getenv("GMAIL_USER_EMAIL", "")
-    GMAIL_CHECK_LABELS: list[str] = os.getenv("GMAIL_CHECK_LABELS", "INBOX,IMPORTANT").split(",")
-    GOOGLE_CALENDAR_ID: str = os.getenv("GOOGLE_CALENDAR_ID", "primary")
+    GOOGLE_CREDENTIALS_PATH: Path = Path(os.getenv("GOOGLE_CREDENTIALS_PATH", "./config/google_credentials.json"))
+    GOOGLE_TOKEN_PATH: Path = Path(os.getenv("GOOGLE_TOKEN_PATH", "./config/google_token.json"))
+    GMAIL_IMPORTANT_SENDERS: list[str] = [s.strip() for s in os.getenv("GMAIL_IMPORTANT_SENDERS", "").split(",") if s.strip()]
+    CALENDAR_PREP_WARNING_MINUTES: int = int(os.getenv("CALENDAR_PREP_WARNING_MINUTES", "60"))
 
     # Asana API
     ASANA_ACCESS_TOKEN: str = os.getenv("ASANA_ACCESS_TOKEN", "")
@@ -56,13 +57,10 @@ class Config:
 
     # Heartbeat Configuration
     HEARTBEAT_INTERVAL_MINUTES: int = int(os.getenv("HEARTBEAT_INTERVAL_MINUTES", "30"))
-    HEARTBEAT_ENABLE_GMAIL: bool = os.getenv("HEARTBEAT_ENABLE_GMAIL", "true").lower() == "true"
-    HEARTBEAT_ENABLE_CALENDAR: bool = os.getenv("HEARTBEAT_ENABLE_CALENDAR", "true").lower() == "true"
-    HEARTBEAT_ENABLE_ASANA: bool = os.getenv("HEARTBEAT_ENABLE_ASANA", "true").lower() == "true"
-    HEARTBEAT_ENABLE_SLACK: bool = os.getenv("HEARTBEAT_ENABLE_SLACK", "true").lower() == "true"
-    HEARTBEAT_QUIET_HOURS_START: str = os.getenv("HEARTBEAT_QUIET_HOURS_START", "22:00")
-    HEARTBEAT_QUIET_HOURS_END: str = os.getenv("HEARTBEAT_QUIET_HOURS_END", "08:00")
-    HEARTBEAT_TIMEZONE: str = os.getenv("HEARTBEAT_TIMEZONE", "America/New_York")
+
+    # Notification Settings
+    NOTIFICATION_DND_START: str = os.getenv("NOTIFICATION_DND_START", "22:00")
+    NOTIFICATION_DND_END: str = os.getenv("NOTIFICATION_DND_END", "08:00")
 
     # Logging Configuration
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
